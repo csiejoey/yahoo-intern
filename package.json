@@ -6,18 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
+    "watch": "npm run build -- --watch",
     "start": "serve ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stegben/css-modules-practice.git"
+    "url": "git+https://github.com/csiejoey/yahoo-intern.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stegben/css-modules-practice/issues"
+    "url": "https://github.com/csiejoey/yahoo-intern/issues"
   },
-  "homepage": "https://github.com/stegben/css-modules-practice#readme",
+  "homepage": "https://github.com/csiejoey/yahoo-intern#readme",
   "dependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
@@ -30,6 +31,7 @@
     "react-dom": "^15.5.4",
     "serve": "^5.1.4",
     "style-loader": "^0.16.1",
+    "styled-components": "^1.4.5",
     "webpack": "^2.4.1"
   }
 }

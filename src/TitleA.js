@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
-class TitleA extends Component {
-  render() {
-    return (
-      <div>
-        {this.props.content}
-      </div>
-    );
-  }
-}
+const TitleA = styled.div`
+	color: red;
+	font-size: ${props => props.highlight? '2em' : '1em'}
+`;
 
 export default TitleA;
