@@ -24,22 +24,20 @@ class Resume extends Component {
 			selectedIndex: 0,
 		}
 		this.switchLanguage = this.switchLanguage.bind(this);
-		// this.select = this.select.bind(this);
 	}
+	// <iframe src="https://www.youtube.com/embed/b-SL_nN1guI?ecver=2" 
+	// 							width="480" 
+	// 							height="360" 
+	// 							frameBorder="0" 
+	// 							allowFullScreen>
+	// </iframe>
 	// <div style="position:relative;height:0;padding-bottom:75.0%"><iframe src="https://www.youtube.com/embed/b-SL_nN1guI?ecver=2" width="480" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 	content() {
 		const { id, english } = this.state;
 		if (id === 4) {
 			return (
 				<div>
-					<div>
-						<iframe src="https://www.youtube.com/embed/b-SL_nN1guI?ecver=2" 
-								width="480" 
-								height="360" 
-								frameBorder="0" 
-								allowFullScreen>
-						</iframe>
-					</div>
+					<video width='100%' autoPlay='autoPlay' controls='controls' src='yahoo_mv_4_21.mp4' />
 				</div>
 			) 
 		} else if (english) {
@@ -87,7 +85,7 @@ class Resume extends Component {
 	}
 
 	switchLanguage() {
-		const { english, tabsName } = this.state;
+		const { id, english, tabsName } = this.state;
 		let languageBtnName, newTabsName, resume, motivation, academic, portfolio;
 		if (english) {
 			languageBtnName = '英文版';
@@ -101,6 +99,11 @@ class Resume extends Component {
 			motivation = 'Motivation';
 			academic = 'Academic Record';
 			portfolio = 'Portfolio';
+		}
+		if (id === 4 && english) {
+			languageBtnName = '就已 - 即時通';
+		} else if (id === 4) {
+			languageBtnName = 'Joey - Yahoo Live Messenger';
 		}
 		this.setState({
 			english: !english,
@@ -136,7 +139,7 @@ class Resume extends Component {
 					</div>
 
 					<div>
-						<RaisedButton label={this.state.languageBtnName} onClick={this.switchLanguage} fullWidth={true} style={{padding: '5px 0 5px'}} />
+						<RaisedButton onClick={this.switchLanguage} label={this.state.languageBtnName} fullWidth={true} style={{padding: '5px 0 5px'}} />
 					</div>
 				</div>
 			</div>
