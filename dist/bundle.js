@@ -13017,6 +13017,23 @@ var Resume = function (_Component) {
 			}
 		}
 	}, {
+		key: 'youtubeLink',
+		value: function youtubeLink() {
+			var id = this.state.id;
+
+			if (id === 4) {
+				return _react2.default.createElement(
+					'div',
+					{ style: { position: 'relative', right: '500px' } },
+					_react2.default.createElement(
+						'a',
+						{ style: { textDecoration: 'none', backgroundColor: 'lightgrey' }, target: '_blank', href: 'https://www.youtube.com/watch?v=Ul0UUClyWY4&t=15s' },
+						_react2.default.createElement('img', { style: { width: '30px', padding: '10px' }, src: 'img/youtube.svg', alt: 'Youtube link' })
+					)
+				);
+			}
+		}
+	}, {
 		key: 'select',
 		value: function select(index) {
 			console.log(index);
@@ -13107,6 +13124,16 @@ var Resume = function (_Component) {
 						'div',
 						{ id: 'picDiv' },
 						this.content()
+					),
+					_react2.default.createElement(
+						'div',
+						{ style: { margin: '0' } },
+						_react2.default.createElement('a', { href: 'https://www.youtube.com/watch?v=Ul0UUClyWY4&t=15s' })
+					),
+					_react2.default.createElement(
+						'div',
+						{ style: { position: 'relative' } },
+						this.youtubeLink()
 					),
 					_react2.default.createElement(
 						'div',
