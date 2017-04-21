@@ -65,17 +65,21 @@ class Resume extends Component {
 		}
 	}
 
-	youtubeLink() {
-		const { id } = this.state;
-		if (id === 4) {
-			return (
-				<div style={{position: 'relative', right: '500px'}}>
-					<a style={{textDecoration: 'none', backgroundColor: 'lightgrey'}} target="_blank" href='https://www.youtube.com/watch?v=Ul0UUClyWY4&t=15s'>
-					<img style={{width: '30px', padding: '10px'}} src='img/youtube.svg' alt='Youtube link' /></a>
-				</div>
-			)
-		}
-	}
+	// youtubeLink() {
+	// 	const { id } = this.state;
+	// 	if (id === 4) {
+	// 		return (
+	// 			<div style={{position: 'relative', right: '500px'}}>
+	// 				<a style={{textDecoration: 'none', backgroundColor: 'lightgrey'}} target="_blank" href='https://www.youtube.com/watch?v=Ul0UUClyWY4&t=15s'>
+	// 				<img style={{width: '30px', padding: '10px'}} src='img/youtube.svg' alt='Youtube link' /></a>
+	// 			</div>
+	// 		)
+	// 	}
+	// }
+
+	// <div style={{position: 'relative'}}>
+	// 	{this.youtubeLink()}
+	// </div>
 
 	select(index) {
 		console.log(index);
@@ -146,10 +150,6 @@ class Resume extends Component {
 
 					<div style={{margin: '0'}}>
 						<a href='https://www.youtube.com/watch?v=Ul0UUClyWY4&t=15s' />
-					</div>
-
-					<div style={{position: 'relative'}}>
-						{this.youtubeLink()}
 					</div>
 
 					<div>
