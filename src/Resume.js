@@ -25,19 +25,13 @@ class Resume extends Component {
 		}
 		this.switchLanguage = this.switchLanguage.bind(this);
 	}
-	// <iframe src="https://www.youtube.com/embed/b-SL_nN1guI?ecver=2" 
-	// 							width="480" 
-	// 							height="360" 
-	// 							frameBorder="0" 
-	// 							allowFullScreen>
-	// </iframe>
-	// <div style="position:relative;height:0;padding-bottom:75.0%"><iframe src="https://www.youtube.com/embed/b-SL_nN1guI?ecver=2" width="480" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+	
 	content() {
 		const { id, english } = this.state;
 		if (id === 4) {
 			return (
 				<div>
-					<video width='100%' autoPlay='autoPlay' controls='controls' src='yahoo_mv_4_21.mp4' />
+					<video width='100%' autoPlay='autoPlay' controls='controls' src='yahoo_mv_4_21_2.mp4' />
 				</div>
 			) 
 		} else if (english) {
